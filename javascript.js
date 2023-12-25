@@ -30,3 +30,23 @@ function play(playerSelection, computerSelection){
     }
 
 }
+
+function game(){
+    let score=0;
+    
+    for (let i=0;i<5;i++){
+    playerSelection=prompt("Enter your choice");
+    computerSelection=getComputerChoice();
+    let msg=play(playerSelection,computerSelection)
+    score=score+msg[1]
+    console.log(msg[0]);}
+    
+    if(score>0){
+        console.log("You Won!");}
+        if(score<0){
+        console.log("You Lose");}
+        if(score==0){
+        console.log("Its a Tie!");}
+    }
+    
+    game();
